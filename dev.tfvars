@@ -10,6 +10,6 @@ Dept       = "IT"
 
 
 
-ami           = "ami-a0cfeed8"
-instance_type = "t2.large"
+ami           = "ami-01ed306a12b7d1c96"
+instance_type = "t2.micro"
 key_name      = "MyMac1"
