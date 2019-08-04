@@ -37,7 +37,7 @@ resource "aws_subnet" "public-c" {
 #This will be private subnets
 resource "aws_subnet" "private-a" {
   vpc_id     = "${aws_vpc.dev.id}"
-  cidr_block = "10.0.2.0/24"
+  cidr_block = "10.0.11.0/24"
 
   tags = {
     Name      = "${var.Name}.private-a"
@@ -48,7 +48,7 @@ resource "aws_subnet" "private-a" {
 }
 resource "aws_subnet" "private-b" {
   vpc_id     = "${aws_vpc.dev.id}"
-  cidr_block = "10.0.2.0/24"
+  cidr_block = "10.0.12.0/24"
 
   tags = {
     Name      = "${var.Name}.private-b"
@@ -59,7 +59,7 @@ resource "aws_subnet" "private-b" {
 }
 resource "aws_subnet" "private-c" {
   vpc_id     = "${aws_vpc.dev.id}"
-  cidr_block = "10.0.2.0/24"
+  cidr_block = "10.0.13.0/24"
 
   tags = {
     Name      = "${var.Name}.private-c"
