@@ -30,5 +30,3 @@ systemctl enable httpd
 #These lines are gonna copy your wordpress's configuration file
   cd /var/www/html
    cp wp-config-sample.php wp-config.php
-
-  
