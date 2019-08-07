@@ -6,5 +6,5 @@ resource "aws_db_instance" "rds" {
   instance_class    = "db.t2.micro"
   name              = "mydb"
   username          = "chris"
-  password          = "chris"
+  password          = "Huslentuguldur2602"
 }
