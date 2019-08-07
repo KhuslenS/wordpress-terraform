@@ -7,8 +7,6 @@ resource "aws_db_instance" "rds" {
   name              = "mydb"
   username          = "chris"
   password          = "Huslentuguldur2602
-  db_subnet_group_name = "[${file(aws_subnet.private-a)}]"
-  security_group_names = "[${file(aws_security_group.private)}]"
-
-
+  db_subnet_group_name = "[${aws_subnet.private-a}]"
+  security_group_names = "[${aws_security_group.private}]"
 }
