@@ -1,18 +1,11 @@
-resource "aws_instance" "mysql" {
-
-  ami                         = "${var.ami}"
-  instance_type               = "${var.instance_type}"
-  key_name                    = "${var.key_name}"
-  subnet_id                   = "${aws_subnet.private-a.id}"
-  vpc_security_group_ids      = ["${aws_security_group.private.id}"]
-  associate_public_ip_address = "true"
-  user_data                   = "${file("mysql.sh")}"
-
-  tags = {
-    Name       = "${var.Name}"
-    Env        = "${var.Env}"
-    Created_by = "${var.Created_by}"
-    Dept       = "${var.Dept}"
-
-  }
+resource "aws_db_instance" "rds" {
+  allocated_storage    = 20
+  storage_type         = "gp2"
+  engine               = "mysql"
+  engine_version       = "5.7"
+  instance_class       = "db.t2.micro"
+  name                 = "mydb"
+  username             = "chris"
+  password             = "chris"
+  parameter_group_name = "default.mysql5.7"
 }
