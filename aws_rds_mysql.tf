@@ -6,5 +6,9 @@ resource "aws_db_instance" "rds" {
   instance_class    = "db.t2.micro"
   name              = "mydb"
   username          = "chris"
-  password          = "Huslentuguldur2602"
+  password          = "Huslentuguldur2602
+  db_subnet_group_name = "${file(aws_subnet.private-a)}"
+  security_group_names = "${file(aws_security_group.private)}"
+
+
 }
